@@ -5,6 +5,7 @@ import Dashboard from "./todos/Dashboard";
 import Header from "./layout/Header";
 import history from "../history";
 import TodoDelete from "./todos/TodoDelete";
+import TodoEdit from "./todos/TodoEdit";
 import { Provider } from "react-redux";
 import store from "../store";
 
@@ -17,6 +18,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/delete/:id" component={TodoDelete} />
+            <Route exact path="/edit/:id" component={TodoEdit} />
           </Switch>
         </Router>
       </Provider>
