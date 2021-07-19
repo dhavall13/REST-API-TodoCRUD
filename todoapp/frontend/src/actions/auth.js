@@ -5,6 +5,8 @@ import {
   USER_LOADING,
   USER_LOADED,
   AUTH_ERROR,
+  REGISTER_SUCCESS,
+  REGISTER_FAIL,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT_SUCCESS,
@@ -26,6 +28,35 @@ export const loadUser = () => async (dispatch, getState) => {
     });
   }
 };
+
+// Register User
+
+export const register =
+  ({ username, email, password }) =>
+  async (dispatch) => {
+    // Headers
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    // Request Body
+    const body = JSON.stringify({ username, email, password });
+
+    try {
+      const res = await axios.post("/api/auth/register", body, config);
+      dispatch({
+        type: REGISTER_SUCCESS,
+        payload: res.data,
+      });
+    } catch (err) {
+      dispatch({
+        type: REGISTER_FAIL,
+      });
+      dispatch(stopSubmit("registerForm", err.response.data));
+    }
+  };
 
 // LOGIN USER
 export const login =
