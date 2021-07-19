@@ -39,13 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todos',
     'frontend',
+    'accounts',
     'rest_framework',
+    'knox',
 ]
 
-REST_FRAMEWORK = {  # added
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
-    ],
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'knox.auth.TokenAuthentication',
+    ),
     'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S",
 }
 
