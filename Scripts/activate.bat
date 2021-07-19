@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\dhava\Documents\Django-Projects\REST-API-TodoCRUD"
+set "VIRTUAL_ENV=D:\Study\Django-Projects\REST-API-TodoCRUD"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

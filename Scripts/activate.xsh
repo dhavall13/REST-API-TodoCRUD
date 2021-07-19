@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"C:\Users\dhava\Documents\Django-Projects\REST-API-TodoCRUD"
+$VIRTUAL_ENV = r"D:\Study\Django-Projects\REST-API-TodoCRUD"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

@@ -1,4 +1,4 @@
-#!C:\Users\dhava\Documents\Django-Projects\REST-API-TodoCRUD\Scripts\python.exe
+#!D:\Study\Django-Projects\REST-API-TodoCRUD\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
