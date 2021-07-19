@@ -7,6 +7,7 @@ import {
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
+  LOGOUT_SUCCESS,
 } from "./types";
 
 // LOAD USER
@@ -71,4 +72,11 @@ export const tokenConfig = (getState) => {
   }
 
   return config;
+};
+
+export const logout = () => async (dispatch, getState) => {
+  await axios.post("/api/auth/logout", null, tokenConfig(getState));
+  dispatch({
+    type: LOGOUT_SUCCESS,
+  });
 };
